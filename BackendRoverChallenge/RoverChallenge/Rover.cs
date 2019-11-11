@@ -4,7 +4,7 @@ namespace RoverChallenge
 {
 	public class Rover
 	{
-		public char[] pontosCardeais = new char[] { 'N', 'W', 'S', 'E' };
+		public char[] pontosCardeais = new char[] { 'N', 'E', 'S', 'W' };
 
 		public char ObterPontoCardealFinal(string direcoes, char pontoCardealAtual)
 		{
