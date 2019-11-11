@@ -5,19 +5,16 @@ namespace Tests
 {
 	public class Tests
 	{
-		[TestCase("RRRR", 'N', 'N')]
-		[TestCase("RRR", 'S', 'E')]
-		[TestCase("R", 'N', 'E')]
-		[TestCase("LLLL", 'N', 'N')]
-		[TestCase("LLLLLLLL", 'N', 'N')]
-		[TestCase("L", 'N', 'W')]
-		public void ObterPontoCardealAtualFinal(
-			string instrucoes, 
-			char pontoCardealAtual, 
+		[TestCase('R', 'N', 'E')]
+		[TestCase('L', 'N', 'W')]
+		[TestCase('L', 'E', 'N')]
+		public void DadaUmaDirecao_AtualizarPontoCardeal(
+			char instrucao,
+			char pontoCardealAtual,
 			char resultadoEsperado)
 		{
 			var rover = new Rover();
-			var resultado = rover.ObterPontoCardealFinal(instrucoes, pontoCardealAtual);
+			var resultado = rover.AtualizarPontoCardeal(instrucao, pontoCardealAtual);
 			Assert.AreEqual(resultadoEsperado, resultado);
 		}
 	}
